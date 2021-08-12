@@ -1,6 +1,6 @@
 import {useState} from 'react'
 
-export default function CommentForm(props) {
+export default function CommentForm({addComment}) {
 
     const [text, setText] = useState('')
 
@@ -10,8 +10,8 @@ export default function CommentForm(props) {
 
     const handleSubmit = (event) => {
         event.preventDefault()
+        addComment(text)
         setText('')
-        props.addComment(text)
     }
 
     return (

@@ -5,11 +5,12 @@ import Comments from './components/Comments'
 
 export default function App() {
 
-  const [comments, setComments] = useState(['yes', 'no'])
+  const [comments, setComments] = useState([])
 
+  // addComment function is passed as props to comment form
+  // new comment is added to comments existing array
   const addComment = (comment) => {
-    console.log(comment)
-    setComments(...comments, comment)
+    setComments([...comments, comment])
   }
 
   return (
