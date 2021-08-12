@@ -4,6 +4,10 @@ export default function Counter() {
 
     const [count, setCount] = useState(0)
 
+    // handleCountChange function increments count if button id matches increment
+    // and decrements if button id matches decrement and count is higher than 0
+    
+
     const handleCountChange = (event) => {
         event.preventDefault()
         if (event.target.id === "increment") {
